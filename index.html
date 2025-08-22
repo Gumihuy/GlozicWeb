@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glozic - IT Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <!-- Logo -->
+<div class="logo">
+  <a href="#hero" class="logo-link">
+    <img src="logo.png" alt="Glozic Logo" class="logo-img">
+  </a>
+</div>
+
+    <!-- Menu Tengah -->
+    <div class="nav-center">
+        <div class="nav-links" id="nav-links">
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#solutions">Solutions</a>
+            <a href="pageapi.html">API</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Tombol Get Started di kanan -->
+    <div class="nav-right">
+      <!-- Tombol -->
+        <a href="#" class="btn-primary" id="openContact">Get Started</a>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-content fade-in">
+        <h1>Empowering Your Business with <span>Glozic</span></h1>
+        <p>Providing modern IT solutions, seamless integrations, and scalable platforms to help your business thrive in the digital era.</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn-primary">Get Started</a>
+            <a href="#about" class="btn-secondary">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Popup Contact Form -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeContact">&times;</span>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="about-container">
+        
+        <!-- Left Text -->
+        <div class="about-text fade-in">
+            <h2>ABOUT GLOZIC</h2>
+            <p>
+                Reimagine solution innovation with Glozic, a disruptive AI-native and cloud-agnostic low-code/no-code 
+                platform accelerating application development and offering unparalleled hosting flexibility across any cloud.
+            </p>
+            <p>
+                Addresses key challenges organizations face in the cloud era:
+                <br>• Compatibility Challenges in Integrating AI solutions
+                <br>• Unpredictable Cloud Spending and Cost
+                <br>• Cloud Dependencies and Cloud Vendor Lock-in
+                <br>• Application Time-To-Market
+            </p>
+        </div>
+
+        <!-- Middle Image -->
+        <div class="about-image fade-in delay-1">
+            <img src="glozic-about.png" alt="About Glozic">
+        </div>
+
+        <!-- Right Text -->
+        <div class="about-text fade-in delay-2">
+            <p>
+                While many organizations are rushing to integrate AI into existing applications to keep pace with the AI adoption wave, 
+                this approach risks exacerbating existing application development challenges. 
+                Issues like unpredictable cloud spending, cloud vendor lock-in, and lengthy time-to-market could be amplified by tacking on AI capabilities.
+            </p>
+            <p>
+                If these challenges resonate with you, look no further. Discover how Glozic empowers enterprises to develop AI-Native applications 
+                faster than ever before, significantly reducing development time and effort, eliminating vendor lock-in, and staying ahead of evolving business demands.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="section-title">Features</h2>
+    <p class="section-subtitle">
+      Some of our key platform features and capabilities to help our customers stay ahead of market trend.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-item fade-in">
+        <img src="folders.svg" alt="Folders">
+        <div>
+          <h3>Folders</h3>
+          <p>Create an in-tenant file storage or link a cloud storage such as Microsoft OneDrive or Google Drive. Folders can be shared to other team members who has access to the tenant portal.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-in">
+        <img src="scheduler.svg" alt="Scheduler">
+        <div>
+          <h3>Scheduler</h3>
+          <p>A user defined job scheduler, define the occurrences to run a flow of actions, such as sending email, calling a web service, or trigger a workflow to run.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-in">
+        <img src="calendar.svg" alt="Calendar View">
+        <div>
+          <h3>Calendar View</h3>
+          <p>Calendar View is an UI for listing or viewing of documents in calendar view of Document Collections, supporting daily, weekly, and monthly views.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-in">
+        <img src="workflow.svg" alt="Workflow Designer">
+        <div>
+          <h3>Workflow Designer</h3>
+          <p>Drag and drop workflow designer features business process flow with state management.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-in">
+        <img src="collections.svg" alt="Dynamic Collections">
+        <div>
+          <h3>Dynamic Collections</h3>
+          <p>Define collections for structured and/or unstructured business documents. Relationships between collections can be defined for normalized structure.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-in">
+        <img src="page-designer.svg" alt="Page Designer">
+        <div>
+          <h3>Page Designer</h3>
+          <p>Create web pages with drag and drop page designer, CSS and JavaScript editor for customization. Supports widgets, templates, layouts, and form components.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-in">
+        <img src="api.svg" alt="API Designer">
+        <div>
+          <h3>API Designer</h3>
+          <p>Define, design, and create API endpoints without code. Supports GET, POST, PUT, etc., with customizable parameters, content types, and outputs.</p>
+        </div>
+      </div>
+
+      <div class="feature-item fade-in">
+        <img src="ai-bot.svg" alt="AI Bot Assisted Builder">
+        <div>
+          <h3>AI Bot Assisted Builder</h3>
+          <p>Automatically create applications with AI assistance, generating forms, API endpoints, and other modules via dynamic JSON patterns.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- OUR SOLUTIONS -->
+<section id="solutions" class="solutions-section">
+  <div class="container">
+    <h2 class="section-title">OUR SOLUTIONS</h2>
+    <p class="section-subtitle">
+      Listed below is a list of sample solutions developed and hosted on Glozic Application Platform.
+    </p>
+
+    <div class="carousel-wrapper" id="solutions">
+      <button class="carousel-btn prev">&#10094;</button>
+
+      <div class="solutions-carousel" id="solutionsCarousel">
+        <div class="solution-card">
+          <img src="event.png" alt="Event Management System">
+          <h3>Event Management System</h3>
+          <p>Automated and Integrated Event Management solution for education and commercial sectors. Features end-to-end event management from creation, listing, delisting, registration of events.</p>
+        </div>
+
+        <div class="solution-card">
+          <img src="service.jpeg" alt="Service Request System">
+          <h3>Service Request System</h3>
+          <p>Part of the Intelligent Building management solution, Service Request modules supports commercial.</p>
+        </div>
+
+        <div class="solution-card">
+          <img src="vcard.jpg" alt="Electronic Business Card">
+          <h3>Electronic Business Card</h3>
+          <p>Integrated with corporate directory system, electronic business card is a self managed vCard solution.</p>
+        </div>
+
+        <div class="solution-card">
+          <img src="hvac.jpg" alt="HVAC Control">
+          <h3>HVAC or Air-con Control</h3>
+          <p>HVAC – Heat Ventilation and Air Conditioning – Extension Request allow building tenants to request for HVAC usage extension.</p>
+        </div>
+
+        <div class="solution-card">
+          <img src="checklist.jpg" alt="Digital Maintenance Checklist">
+          <h3>Digital Maintenance Checklist</h3>
+          <p>Business User friendly maintenance checklist system allows business users to self create and maintain checklist, with supports of maintenance reporting integrating with business intelligent tools such as PowerBI, etc.</p>
+        </div>
+
+        <div class="solution-card">
+          <img src="visitor.png" alt="Visitor Management System">
+          <h3>Visitor Management System</h3>
+          <p>Visitor Management System of Intelligent Building provide a better control on visitor flow and crowd of building.</p>
+        </div>
+      </div>
+
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing-section">
+  <div class="container">
+    <h2 class="section-title">Pricing</h2>
+    <div class="pricing-cards">
+      
+      <!-- Free Tier -->
+      <div class="pricing-card">
+        <h3>Free Tier</h3>
+        <p class="price"><span class="small">per month</span><br><strong>$0</strong></p>
+        <ul>
+          <li>2 Collections of documents</li>
+          <li>Form/Wizard/PDF Forms</li>
+          <li>File Storage (Google/OneDrive/Internal)</li>
+          <li class="disabled">App Spaces</li>
+          <li class="disabled">Custom SMTP/SMS/Database</li>
+          <li class="disabled">Collaboration</li>
+        </ul>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+
+      <!-- Individual Account -->
+      <div class="pricing-card">
+        <h3>Individual Account</h3>
+        <p class="price"><span class="small">user/month</span><br><strong>$3.89</strong></p>
+        <ul>
+          <li>Collections of documents</li>
+          <li>Form/Wizard/PDF Forms</li>
+          <li>File Storage (Google/OneDrive/Internal)</li>
+          <li>App Spaces</li>
+          <li class="disabled">Custom SMTP/SMS/Database</li>
+          <li>Collaboration (team members)</li>
+        </ul>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+
+      <!-- Enterprise Tenant -->
+      <div class="pricing-card">
+        <h3>Enterprise Tenant</h3>
+        <p class="price"><span class="small">user/month</span><br><strong>from $0.74</strong></p>
+        <ul>
+          <li>Collections of documents</li>
+          <li>Form/Wizard/PDF Forms</li>
+          <li>File Storage (Google/OneDrive/Internal)</li>
+          <li>App Spaces</li>
+          <li>Custom SMTP/SMS/Database</li>
+          <li>Collaboration (Tenant wide)</li>
+        </ul>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="blog-section" id="blog">
+  <div class="container">
+    <h2 class="blog-title">Blog Posts</h2>
+    <span class="underline"></span>
+
+    <div class="blog-grid">
+      <!-- Blog Card 1 -->
+      <div class="blog-card">
+        <img src="blog1.png" alt="Blog Image 1">
+        <div class="blog-content">
+          <h3>Create from Form Templates</h3>
+          <span class="blog-date">April 25, 2019</span>
+          <p>Glozic features a very powerful and advanced form designer, we can create form varying from a very simple to a very complex form layout, multiple pages wizard forms, or PDF forms.
+
+No matter how easy It is the form designer is, it can still be challenging for users to create a form from scratch or without referring to any form layout or samples. To boost users productivity and make it easier for user to create forms, Glozic form designer allows users to create forms based on the available form templates.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="blog-card">
+        <img src="blog2.png" alt="Blog Image 2">
+        <div class="blog-content">
+          <h3>Create a form with support of multiple languages</h3>
+          <span class="blog-date">April 25, 2019</span>
+          <p>Glozic forms could be setup to support multiple languages, and default form language could be set to a preferred language targeting majority of the users of the form.
+
+Setting up multiple languages form is as simple as selecting a language and add to the form in the form designer, you may use the translate feature to translate field labels or manually translate any of the field labels if the auto translated label does not meet the desired outcomes.
+
+The below embedded recording demonstrates how easy it is to create a form supporting multiple languages.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="blog-card">
+        <img src="blog3.png" alt="Blog Image 3">
+        <div class="blog-content">
+          <h3>Setup Glozic with Nintex Workflow Tasks</h3>
+          <span class="blog-date">April 25, 2019</span>
+          <p>When a user first login to the Glozic portal or tenant, the Workflow Task is by default not setup to show a list of Nintex Workflow Task, what the user will see instead is an empty view of “Nintex Tasks” shown in the below screen capture.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <h2 class="contact-title">Contact Form</h2>
+    <span class="underline"></span>
+
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="First name" required>
+          <input type="text" placeholder="Full name" required>
+        </div>
+        <input type="email" placeholder="Email address" required>
+        <input type="text" placeholder="Subject of the message" required>
+        <textarea placeholder="Type your message here.." rows="5" required></textarea>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+
+      <!-- Contact Info -->
+<div class="contact-info">
+  <h3>Singapore</h3>
+  <div class="info-block">
+    <p><i class="fas fa-map-marker-alt"></i> 
+      <strong>Address</strong><br>
+      50 East Coast Road #02-127 Roxy Square Singapore 428769
+    </p>
+  </div>
+  <div class="info-block">
+    <p><i class="fas fa-phone-alt"></i> 
+      <strong>Phone</strong><br>
+      +65 8921 8661
+    </p>
+  </div>
+  <div class="info-block">
+    <p><i class="fas fa-envelope"></i> 
+      <strong>Email</strong><br>
+      enquiry@glozic.com
+    </p>
+  </div>
+</div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Us -->
+    <div class="footer-col">
+      <h4>About Us</h4>
+      <p>
+        Reimagine solution innovation with Glozic, a disruptive AI-native and cloud-agnostic low-code/no-code
+        platform accelerating application development and offering unparalleled hosting flexibility across any cloud.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-col">
+      <h4>Subscribe Newsletter</h4>
+      <form class="newsletter">
+        <input type="email" placeholder="Enter Email" required>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      Copyright &copy; 2025 All rights reserved |
+      Made with <span class="heart"></span> by <a href="#">Glozic</a>
+    </p>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  const items = document.querySelectorAll('.feature-item.fade-in');
+  if(!('IntersectionObserver' in window)){ 
+    items.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  items.forEach(el=>io.observe(el));
+})();
+</script>
+
+
+
+<script>
+const contactModal = document.getElementById("contactModal");
+const openContact = document.getElementById("openContact");
+const closeContact = document.getElementById("closeContact");
+
+openContact.addEventListener("click", (e) => {
+  e.preventDefault(); // cegah lompat ke #contact
+  contactModal.style.display = "flex";
+});
+closeContact.addEventListener("click", () => {
+  contactModal.style.display = "none";
+});
+window.addEventListener("click", (e) => {
+  if (e.target === contactModal) {
+    contactModal.style.display = "none";
+  }
+});
+
+// (Opsional) Handling form submit
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Thank you! Your message has been sent.");
+  contactModal.style.display = "none";
+  this.reset();
+});
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // supaya animasi jalan sekali
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  });
+</script>
+
+<!-- JS -->
+<script>
+const carousel = document.getElementById("solutionsCarousel");
+const prevBtn = document.querySelector(".carousel-btn.prev");
+const nextBtn = document.querySelector(".carousel-btn.next");
+
+const cardWidth = 320; // lebar card (300px + margin/gap)
+
+nextBtn.addEventListener("click", () => {
+  carousel.scrollBy({ left: cardWidth, behavior: "smooth" });
+});
+prevBtn.addEventListener("click", () => {
+  carousel.scrollBy({ left: -cardWidth, behavior: "smooth" });
+});
+</script>
+
+
+<script src="script.js"></script>
+</body>
+</html>

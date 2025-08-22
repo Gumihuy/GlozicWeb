@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Packages - Glozic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Warna dari palet */
+    :root {
+      --charcoal: #242424;
+      --light-khaki: #e3dcc4;
+      --burnt-sienna: #cd6640;
+      --sunset-orange: #ef9836;
+    }
+
+    body {
+      background-color: var(--light-khaki);
+      color: var(--charcoal);
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo img {
+      height: 36px;
+    }
+
+    .nav-center {
+      flex: 1;
+      text-align: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--charcoal);
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--burnt-sienna);
+    }
+
+    h2 {
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+
+    /* API Cards */
+    .api-card {
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .api-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      border-left: 6px solid var(--burnt-sienna);
+    }
+
+    .api-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: var(--sunset-orange);
+      transition: color 0.3s ease;
+    }
+
+    .api-card:hover .api-icon {
+      color: var(--burnt-sienna);
+    }
+
+    .api-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .api-desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* footer Section */
+.footer {
+  background: #222;
+  color: #bbb;
+  padding: 50px 5% 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h4 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #ef9836;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ef9836;
+}
+
+.social-links a {
+  color: #bbb;
+  margin-right: 10px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  color: #ef9836;
+  transform: scale(1.2);
+}
+
+.newsletter {
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.newsletter button {
+  background: #ef9836;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.newsletter button:hover {
+  background: #ef9836;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+
+.footer-bottom a {
+  color: #ef9836;
+  text-decoration: none;
+}
+
+.heart {
+  color: red;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="logo.png" alt="Glozic Logo">
+    </div>
+
+    <!-- Menu Tengah -->
+    <div class="nav-center">
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html">About</a>
+            <a href="index.html">Features</a>
+            <a href="index.html">Solutions</a>
+            <a href="pageapi.html">API</a>
+            <a href="index.html">Pricing</a>
+            <a href="index.html">Blog</a>
+            <a href="index.html">Contact</a>
+        </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2>API Packages</h2>
+      <p class="lead">Integrasi API untuk mendukung kebutuhan bisnis Anda secara efisien dan aman</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="api-card h-100 text-center">
+          <div class="api-icon">🔳</div>
+          <div class="api-title">QR Code Generator</div>
+          <div class="api-desc">Business grade QR Code Generator dengan fokus pada keamanan data.</div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="api-card h-100 text-center">
+          <div class="api-icon">💬</div>
+          <div class="api-title">WhatsApp for Business</div>
+          <div class="api-desc">Integrasi WhatsApp API dengan dukungan otomasi proses bisnis.</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="api-card h-100 text-center">
+          <div class="api-icon">📸</div>
+          <div class="api-title">Instagram Business</div>
+          <div class="api-desc">Integrasi Instagram API untuk pesan bisnis & otomasi layanan.</div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="api-card h-100 text-center">
+          <div class="api-icon">📄</div>
+          <div class="api-title">Document Generation</div>
+          <div class="api-desc">Generate dokumen secara otomatis dengan konversi ke PDF.</div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="api-card h-100 text-center">
+          <div class="api-icon">📝</div>
+          <div class="api-title">Task Management</div>
+          <div class="api-desc">Sederhanakan manajemen tugas dengan sistem API terintegrasi.</div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="api-card h-100 text-center">
+          <div class="api-icon">💬</div>
+          <div class="api-title">Conversation</div>
+          <div class="api-desc">API multi-channel conversation untuk pengalaman interaktif.</div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-md-4">
+        <div class="api-card h-100 text-center">
+          <div class="api-icon">📱</div>
+          <div class="api-title">Line API</div>
+          <div class="api-desc">LINE API untuk integrasi pesan bisnis secara mudah & cepat.</div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-md-4">
+        <div class="api-card h-100 text-center">
+          <div class="api-icon">📦</div>
+          <div class="api-title">Message Queue</div>
+          <div class="api-desc">Layanan Message Queue untuk menjaga kestabilan sistem bisnis.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Us -->
+    <div class="footer-col">
+      <h4>About Us</h4>
+      <p>
+        Reimagine solution innovation with Glozic, a disruptive AI-native and cloud-agnostic low-code/no-code
+        platform accelerating application development and offering unparalleled hosting flexibility across any cloud.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-col">
+      <h4>Subscribe Newsletter</h4>
+      <form class="newsletter">
+        <input type="email" placeholder="Enter Email" required>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      Copyright &copy; 2025 All rights reserved |
+      Made with <span class="heart"></span> by <a href="#">Glozic</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
